@@ -1,0 +1,43 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex: 1;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  flex: 1;
+}
+
+.sidebarColumn {
+  position: sticky;
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+}
+
+@media (max-width: 720px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebarColumn {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content {
+    padding: var(--space-4) var(--space-3);
+  }
+}

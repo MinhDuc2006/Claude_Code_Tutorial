@@ -1,0 +1,49 @@
+.wrapper {
+  position: relative;
+  margin: var(--space-3) 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.label {
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.pre {
+  margin: 0;
+  padding: var(--space-3);
+  overflow-x: auto;
+  background: var(--code-bg);
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--code-foreground);
+  white-space: pre;
+}
+
+.copyButton {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .copyButton:hover {
+    background: var(--surface);
+  }
+}

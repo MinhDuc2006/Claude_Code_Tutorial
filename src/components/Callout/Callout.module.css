@@ -1,0 +1,38 @@
+.callout {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.callout[data-variant="note"] {
+  border-left-color: var(--border);
+  background: var(--surface);
+}
+
+.callout[data-variant="warning"] {
+  border-left-color: var(--warning);
+  background: var(--warning-bg);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-1);
+}
+
+.body {
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.body :global(p) {
+  margin: 0;
+}
+
+.body :global(p + p) {
+  margin-top: var(--space-2);
+}

@@ -1,12 +1,47 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --accent: #d97757;
+  --accent-contrast: #ffffff;
+  --border: #e5e5e5;
+  --surface: #f7f7f7;
+  --code-bg: #f2f2f2;
+  --code-foreground: #1a1a1a;
+  --warning: #b45309;
+  --warning-bg: #fef3c7;
+
+  --sidebar-width: 260px;
+  --content-max-width: 760px;
+  --header-height: 64px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+
+  --radius: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --border: #262626;
+    --surface: #141414;
+    --code-bg: #1a1a1a;
+    --code-foreground: #ededed;
+    --warning: #fbbf24;
+    --warning-bg: #3f2d05;
   }
 }
 

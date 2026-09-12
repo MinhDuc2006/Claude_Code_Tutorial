@@ -1,0 +1,50 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-4) var(--space-3);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.groupTitle {
+  padding: 0 var(--space-3);
+  margin-bottom: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: color-mix(in srgb, currentColor 55%, transparent);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid transparent;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: var(--text-base);
+  color: var(--foreground);
+}
+
+.link[data-active] {
+  border-left-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  font-weight: 500;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover:not([data-active]) {
+    background: var(--surface);
+  }
+}
